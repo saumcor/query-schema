@@ -1,9 +1,10 @@
 # query-schema
-Using web schema for optimizing ORM queries
 
+Use marhsmallow-sqlalchemy schemas to optimally construct ORM queries
 
-ORM Models, contain attributes and relationships with other Models, which may not be always required when responding to a request
+ORM Models, contain attributes and relationships with other Models, which may
+or may not be required when serializing the models.
 
-A Schema contains the exact attributes required in a response
+By using the schema's required attributes, this library tries to optimize the ORM query.
 
-By mapping the two and removing irrelevant relationships we can optimize the query
+This helps solve the N+1 query probelms most ORMs have.
